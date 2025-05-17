@@ -22,6 +22,6 @@ push    0               ; Val – the value to fill with (0)
 lea     ecx, [ebp+Buffer]
 push    ecx             ; ptr – pointer to the start of the memory area
 call    memset
-
+```
 בקריאה זו, הפונקציה תבצע מילוי של 1024 בתים מהכתובת Buffer בערך 0x00.
 
