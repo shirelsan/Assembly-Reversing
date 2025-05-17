@@ -54,6 +54,8 @@ decrypted = xor_decrypt(target_string, key)
 print("Password:")
 print(decrypted.decode('ascii', errors='replace'))  # 'replace' replaces invalid bytes with '?'
 ```
+<u>הסבר על הפונקציה:</u>
+
 הסבר על הפונקציה:
 הפונקציה xor_decrypt מבצעת פענוח של מחרוזת בתים (bytes) על ידי שימוש במפתח XOR בן 4 בתים (32 ביט).
 הפונקציה מחלקת את המחרוזת לבלוקים של 4 בתים, מבצעת על כל בלוק פעולת XOR עם המפתח, ומחזירה את התוצאה המפוענחת באותו אורך כמו הקלט.
