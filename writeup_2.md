@@ -25,3 +25,36 @@ call    memset
 ```
 בקריאה זו, הפונקציה תבצע מילוי של 1024 בתים מהכתובת Buffer בערך 0x00.
 
+
+
+
+
+```python
+def xor_decrypt(target: bytes, key: int) -> bytes:
+    # Create a mutable byte array to store the decrypted result
+    result = bytearray()
+    for i in range(0, len(target), 4):          # Process the input data in 4-byte blocks
+        block = target[i:i+4]
+
+        while len(block) < 4:                   # Pad the block with zeros if it's less than 4 bytes
+            block += b'\x00'
+        # Convert the 4-byte block to an integer (little-endian format)
+        block_val = int.from_bytes(block, byteorder='little')
+        decrypted_val = block_val ^ key          # XOR
+
+        # Convert the decrypted integer back to 4 bytes
+        decrypted_block = decrypted_val.to_bytes(4, byteorder='little')
+        result += decrypted_block
+    return result[:len(target)]
+
+target_string = b"into the rabbit hole"
+key = 0x41524241  
+decrypted = xor_decrypt(target_string, key)
+
+print("Password:")
+print(decrypted.decode('ascii', errors='replace'))  # 'replace' replaces invalid bytes with '?'
+```
+הסבר על הפונקציה:
+הפונקציה xor_decrypt מבצעת פענוח של מחרוזת בתים (bytes) על ידי שימוש במפתח XOR בן 4 בתים (32 ביט).
+הפונקציה מחלקת את המחרוזת לבלוקים של 4 בתים, מבצעת על כל בלוק פעולת XOR עם המפתח, ומחזירה את התוצאה המפוענחת באותו אורך כמו הקלט.
+אם הבלוק האחרון קצר מ-4 בתים, הוא מתווסף באפסים כדי להשלים אותו.
