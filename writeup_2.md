@@ -16,7 +16,7 @@ Each section includes the challenge goal, reverse engineering process, and the f
 
 הפונקציה memset מוגדרת כ־Thunk, כלומר הפניה ישירה (jmp) לפונקציה החיצונית __imp_memset. הפונקציה ממלאת אזור בזיכרון בערך קבוע בהתאם לפרמטרים המועברים לה.
 קריאה לפונקציה מתבצעת לפי מוסכמת הקריאה cdecl, באמצעות דחיפת הפרמטרים ל־stack בסדר הבא:
-
+```asm
 push    400h            ; Size – number of bytes to fill (1024)
 push    0               ; Val – the value to fill with (0)
 lea     ecx, [ebp+Buffer]
