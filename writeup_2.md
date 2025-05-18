@@ -54,11 +54,12 @@ Each section includes the challenge goal, reverse engineering process, and the f
   * **לולאת עיבוד XOR**
   
   מבוצעת לולאה החוזרת על מחרוזת הקלט בבלוקים של 4 בתים:
-  
-    * בכל איטרציה, ארבעת הבתים ב־Buffer עוברים XOR עם מפתח קבוע `0x41524241`.
-  
-    * הלולאה ממשיכה כל עוד `i + 3 < strlen(Buffer)`.
+ 
+    *בכל איטרציה, ארבעת הבתים ב־Buffer עוברים XOR עם מפתח קבוע 0x41524241.
 
+    *התוצאה נשמרת בחזרה במיקום המתאים ב־Buffer.
+
+    *הלולאה ממשיכה כל עוד i + 3 < strlen(Buffer).
   
   * **השוואת מחרוזות**
   
@@ -112,4 +113,7 @@ print(decrypted.decode('ascii', errors='replace'))
 
 הסיסמה שקיבלנו: **(,&.a6:$a03##+&a)->$**
 
+
+
+## Exercise: Wonderland 3
 
