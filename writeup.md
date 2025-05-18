@@ -75,31 +75,7 @@ Each section includes the challenge goal, reverse engineering process, and the f
 
 להלן הסקריפט שבוצע:
 
-```python
-def xor_decrypt(target: bytes, key: int) -> bytes:
-    # Create a mutable byte array to store the decrypted result
-    result = bytearray()
-    for i in range(0, len(target), 4):          # Process the input data in 4-byte blocks
-        block = target[i:i+4]
 
-        while len(block) < 4:                   # Pad the block with zeros if it's less than 4 bytes
-            block += b'\x00'
-        # Convert the 4-byte block to an integer (little-endian format)
-        block_val = int.from_bytes(block, byteorder='little')
-        decrypted_val = block_val ^ key          # XOR
-
-        # Convert the decrypted integer back to 4 bytes
-        decrypted_block = decrypted_val.to_bytes(4, byteorder='little')
-        result += decrypted_block
-    return result[:len(target)]
-
-target_string = b"into the rabbit hole"
-key = 0x41524241  
-decrypted = xor_decrypt(target_string, key)
-
-print("Password:")
-print(decrypted.decode('ascii', errors='replace')) 
-```
 ![ERD diagram](https://github.com/shirelsan/Assembly-Reversing/blob/main/case2_py.png?raw=true) 
 
 
