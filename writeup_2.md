@@ -54,7 +54,7 @@ Each section includes the challenge goal, reverse engineering process, and the f
   * **לולאת עיבוד XOR**
   
   מבוצעת לולאה החוזרת על מחרוזת הקלט בבלוקים של 4 בתים:
- 
+ *
     - בכל איטרציה, ארבעת הבתים ב־Buffer עוברים XOR עם מפתח קבוע 0x41524241.
 
     - התוצאה נשמרת בחזרה במיקום המתאים ב־Buffer.
