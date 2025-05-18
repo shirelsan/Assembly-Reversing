@@ -100,6 +100,9 @@ decrypted = xor_decrypt(target_string, key)
 print("Password:")
 print(decrypted.decode('ascii', errors='replace')) 
 ```
+![ERD diagram](https://github.com/shirelsan/Assembly-Reversing/blob/main/case2_py.png?raw=true) 
+
+
 * הסבר על הפונקציה:
 
 הפונקציה xor_decrypt מפענחת מחרוזת בתים (bytes) על ידי שימוש במפתח XOR בן 4 בתים (32 ביט).
