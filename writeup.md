@@ -1,7 +1,7 @@
 # Assembly Reversing Writeup
 
-This document contains explanations and solutions for various Assembly reversing exercises.  
-Each section includes the challenge goal, reverse engineering process, and the final solution.
+This document contains explanations and solutions for Assembly reversing exercises.
+It focuses on Wonderland challenges — Stages 2 and 3 — including analysis and recovery of the correct inputs.
 
 ---
 ## Exercise: Wonderland 2
