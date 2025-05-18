@@ -61,12 +61,6 @@ Each section includes the challenge goal, reverse engineering process, and the f
 
     * הלולאה ממשיכה 
   
-     *-  בכל איטרציה, ארבעת הבתים ב־Buffer עוברים XOR עם מפתח קבוע `0x41524241`.
-     
-     *-  התוצאה נשמרת בחזרה במיקום המתאים ב־Buffer.
-     
-     **-**  הלולאה ממשיכה כל עוד `i + 3 < strlen(Buffer)`.
-
   * **השוואת מחרוזות**
   
   לאחר סיום הפענוח, מבוצעת השוואת מחרוזת בין התוצאה המפוענחת (Buffer) לבין המחרוזת `"into the rabbit hole"`.
