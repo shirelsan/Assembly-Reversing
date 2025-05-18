@@ -54,10 +54,12 @@ Each section includes the challenge goal, reverse engineering process, and the f
   * **לולאת עיבוד XOR**
   
   מבוצעת לולאה החוזרת על מחרוזת הקלט בבלוקים של 4 בתים:
-
-      *  בכל איטרציה, ארבעת הבתים ב־Buffer עוברים XOR עם מפתח קבוע `0x41524241`.
-      *  התוצאה נשמרת בחזרה במיקום המתאים ב־Buffer.
-      *  הלולאה ממשיכה כל עוד `i + 3 < strlen(Buffer)`.
+  
+     *-  בכל איטרציה, ארבעת הבתים ב־Buffer עוברים XOR עם מפתח קבוע `0x41524241`.
+     
+     *-  התוצאה נשמרת בחזרה במיקום המתאים ב־Buffer.
+     
+     **-**  הלולאה ממשיכה כל עוד `i + 3 < strlen(Buffer)`.
 
   * **השוואת מחרוזות**
   
@@ -101,7 +103,7 @@ key = 0x41524241
 decrypted = xor_decrypt(target_string, key)
 
 print("Password:")
-print(decrypted.decode('ascii', errors='replace'))  # 'replace' replaces invalid bytes with '?'
+print(decrypted.decode('ascii', errors='replace')) 
 ```
 * הסבר על הפונקציה:
 
