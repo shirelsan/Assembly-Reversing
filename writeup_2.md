@@ -108,6 +108,7 @@ print(decrypted.decode('ascii', errors='replace'))
 
 הסיסמה שקיבלנו: **(,&.a6:$a03##+&a)->$**
 
+![ERD diagram](https://github.com/shirelsan/Assembly-Reversing/blob/main/case2.png?raw=true) 
 
 
 ## Exercise: Wonderland 3
