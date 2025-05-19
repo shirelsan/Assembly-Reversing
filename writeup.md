@@ -1,7 +1,7 @@
 # Assembly Reversing Writeup
 
 This document contains explanations and solutions for Assembly reversing exercises.
-It focuses on Wonderland challenges — Stages 2 and 3 — including analysis and recovery of the correct inputs.
+It focuses on Wonderland challenges stages 2 and 3 — including analysis and recovery of the correct inputs.
 
 ## Exercise: Wonderland 2
 
