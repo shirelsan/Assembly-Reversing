@@ -156,6 +156,7 @@ It focuses on Wonderland challenges — Stages 2 and 3 — including analysis an
 
  ```python
 import struct
+
 # The data as found at address word_404000 (in little endian format)
 data_bytes = bytes([
     0x07, 0x00,  # 0
@@ -169,6 +170,7 @@ data_bytes = bytes([
 ])
 # Read 8 signed short values (2 bytes each) from the byte sequence
 values = list(struct.unpack('<8h', data_bytes))
+
 # Create a list of indices that would sort the values in ascending order
 sorted_indices = sorted(range(8), key=lambda i: values[i])
 
