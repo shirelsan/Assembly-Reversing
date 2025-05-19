@@ -75,7 +75,7 @@ It focuses on Wonderland challenges — Stages 2 and 3 — including analysis an
 להלן הסקריפט שבוצע:
 
 
-![ERD diagram](https://github.com/shirelsan/Assembly-Reversing/blob/main/case2_py.png?raw=true) 
+![case2](https://github.com/shirelsan/Assembly-Reversing/blob/main/case2_py.png?raw=true) 
 
 
 * הסבר על הפונקציה:
@@ -86,7 +86,7 @@ It focuses on Wonderland challenges — Stages 2 and 3 — including analysis an
 
 הסיסמה שקיבלנו: **(,&.a6:$a03##+&a)->$**
 
-![ERD diagram](https://github.com/shirelsan/Assembly-Reversing/blob/main/case2-sol.png?raw=true) 
+![case2](https://github.com/shirelsan/Assembly-Reversing/blob/main/case2-sol.png?raw=true) 
 
 
 ## Exercise: Wonderland 3
@@ -178,12 +178,14 @@ print("\npassword:")
 print(' '.join(map(str, sorted_indices)))
  ```
 
-![ERD diagram](https://github.com/shirelsan/Assembly-Reversing/blob/main/case_3_py.png?raw=true) 
+![case3 py](https://github.com/shirelsan/Assembly-Reversing/blob/main/case_3_py.png?raw=true) 
+
+![case3 py](https://github.com/shirelsan/Assembly-Reversing/blob/main/case_3.png?raw=true) 
 
 
 הסיסמה שקיבלנו: **5 7 1 6 0 2 3 4**
 
-![ERD diagram](https://github.com/shirelsan/Assembly-Reversing/blob/main/case_3-sol.png?raw=true) 
+![case3 sol](https://github.com/shirelsan/Assembly-Reversing/blob/main/case_3-sol.png?raw=true) 
 
 
 
