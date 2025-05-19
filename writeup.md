@@ -182,8 +182,6 @@ print("\npassword:")
 print(' '.join(map(str, sorted_indices)))
  ```
 
-![case3 py](https://github.com/shirelsan/Assembly-Reversing/blob/main/case3.png?raw=true)
-
 ![case3 py](https://github.com/shirelsan/Assembly-Reversing/blob/main/case3_py.png?raw=true)
 
 
