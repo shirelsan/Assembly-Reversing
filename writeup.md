@@ -129,7 +129,7 @@ It focuses on Wonderland challenges — Stages 2 and 3 — including analysis an
 
   • נשלף הערך המתאים מתוך word_404000, ונשמר כ־signed 16-bit בפורמט Little Endian.
 
-  • הערכים מומרצים בזה אחר זה, ובכל איטרציה נבדק האם הערך הנוכחי גדול מהקודם.
+  • הערכים מורצים בזה אחר זה, ובכל איטרציה נבדק האם הערך הנוכחי גדול מהקודם.
 
 **5. בדיקת סדר עולה**
 הפונקציה בודקת האם כל הערכים הממופים מהקלט (באמצעות טבלת ההמרה) נמצאים בסדר עולה.
@@ -184,14 +184,6 @@ print(' '.join(map(str, sorted_indices)))
 
 ![case3 py](https://github.com/shirelsan/Assembly-Reversing/blob/main/case_3_py.png?raw=true) 
 
-![case3 py](https://github.com/shirelsan/Assembly-Reversing/blob/main/case_3.png?raw=true) 
-
-
 הסיסמה שקיבלנו: **5 7 1 6 0 2 3 4**
 
 ![case3 sol](https://github.com/shirelsan/Assembly-Reversing/blob/main/case_3-sol.png?raw=true) 
-
-
-
-
-
