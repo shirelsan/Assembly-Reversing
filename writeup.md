@@ -184,6 +184,8 @@ print(' '.join(map(str, sorted_indices)))
 
 ![case3 py](https://github.com/shirelsan/Assembly-Reversing/blob/main/case_3_py.png?raw=true) 
 
+![case3 py](https://github.com/shirelsan/Assembly-Reversing/blob/main/case3.png?raw=true)
+
 הסיסמה שקיבלנו: **5 7 1 6 0 2 3 4**
 
 ![case3 sol](https://github.com/shirelsan/Assembly-Reversing/blob/main/case_3-sol.png?raw=true) 
