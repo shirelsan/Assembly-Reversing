@@ -177,7 +177,12 @@ sorted_indices = sorted(range(8), key=lambda i: values[i])
 print("\npassword:")
 print(' '.join(map(str, sorted_indices)))
  ```
+![ERD diagram](https://github.com/shirelsan/Assembly-Reversing/blob/main/case3.png?raw=true) 
 
+
+הסיסמה שקיבלנו: **4 3 2 0 6 1 7 5**
+
+![ERD diagram](https://github.com/shirelsan/Assembly-Reversing/blob/main/case3-sol.png?raw=true) 
 
 
 
