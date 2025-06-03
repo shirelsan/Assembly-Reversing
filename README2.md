@@ -11,20 +11,20 @@
 זו הפונקציה שמבצעת בפועל את קריאת MessageBoxA ובגללה ה־MessageBox המקורי מוצג.
 אחרי אותה קריאה הופיעו שורות ריקות (NOP), שהעידו על מקום פנוי.
    
-3. **הוספת קוד חדש (MyInjectedCode) באזור ה־NOPים**
+2. **הוספת קוד חדש (MyInjectedCode) באזור ה־NOPים**
 
 בחלק של האזור הפנוי (בחרתי בכתובת 004010B9) יצרתי את הלייבל MyInjectedCode:
 ![4](https://github.com/shirelsan/Assembly-Reversing/blob/main/4.png?raw=true)  
 
-5. **הזזת המחרוזות החדשות לתחום פנוי מעבר ל־NOPs**
+3. **הזזת המחרוזות החדשות לתחום פנוי מעבר ל־NOPs**
 
 את המחרוזות שמרתי במקום נפרד, החל מהכתובת 00401100:
 ![4](https://github.com/shirelsan/Assembly-Reversing/blob/main/5.png?raw=true)  
-7. **ריסת הקריאה המקורית בקפיצה לקוד החדש**
+4. **ריסת הקריאה המקורית בקפיצה לקוד החדש**
 
 בכתובת 004010B0 החלפתי את הקריאה המקורית call    sub_4014D3 ב->  jmp     MyInjectedCode
 
-8. **השלמת הקוד עם Continue_as_usual**
+5. **השלמת הקוד עם Continue_as_usual**
    
     בסיום MyInjectedCode הוספתי קפיצה חזרה:
 ```asm
