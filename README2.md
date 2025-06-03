@@ -23,7 +23,10 @@
 ![4](https://github.com/shirelsan/Assembly-Reversing/blob/main/5.png?raw=true)  
 4. **ריסת הקריאה המקורית בקפיצה לקוד החדש**
 
-בכתובת 004010B0 החלפתי את הקריאה המקורית call    sub_4014D3 ב->  jmp     MyInjectedCode
+בכתובת 004010B0 החלפתי את הקריאה המקורית:
+```asm call    sub_4014D3```
+ב- 
+```asm jmp     MyInjectedCode```
 
 5. **השלמת הקוד עם Continue_as_usual**
    
