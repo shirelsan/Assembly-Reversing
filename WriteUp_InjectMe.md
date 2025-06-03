@@ -43,3 +43,6 @@ jmp     Continue_as_usual    ; 004010B5
     nop
 ```
 כך התוכנית חוזרת בדיוק להמשך שהייתה אחרי call sub_4014D3.
+
+6. **הרצת התוכנית:** 
+![4](https://github.com/shirelsan/Assembly-Reversing/blob/main/6.png?raw=true) 
