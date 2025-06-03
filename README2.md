@@ -24,9 +24,9 @@
 4. **ריסת הקריאה המקורית בקפיצה לקוד החדש**
 
 בכתובת 004010B0 החלפתי את הקריאה המקורית:
-```asm call    sub_4014D3```
+``` call    sub_4014D3 ```
 ב- 
-```asm jmp     MyInjectedCode```
+``` jmp     MyInjectedCode```
 
 5. **השלמת הקוד עם Continue_as_usual**
    
