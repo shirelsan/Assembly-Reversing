@@ -46,4 +46,4 @@ jmp     Continue_as_usual    ; 004010B5
 
 6. **הרצת התוכנית:**
    
-![4](https://github.com/shirelsan/Assembly-Reversing/blob/main/6.png?raw=true) 
+![4](https://github.com/shirelsan/Assembly-Reversing/blob/main/7.png?raw=true) 
