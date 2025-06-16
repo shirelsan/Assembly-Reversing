@@ -184,4 +184,4 @@ print(' '.join(map(str, sorted_indices)))
 
 הסיסמה שקיבלנו: **5 7 1 6 0 2 3 4**
 
-![case2](https://github.com/shirelsan/Assembly-Reversing/blob/main/Static%20Analysis/case3-sol.png?raw=true) 
+![case2](https://github.com/shirelsan/Assembly-Reversing/blob/main/Static%20Analysis/case_3-sol.png?raw=true) 
