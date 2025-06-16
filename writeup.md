@@ -75,8 +75,7 @@ It focuses on Wonderland challenges stages 2 and 3 — including analysis and re
 להלן הסקריפט שבוצע:
 
 
-![case2](https://github.com/shirelsan/Assembly-Reversing/blob/main/case2_py.png?raw=true) 
-
+![case2](https://github.com/shirelsan/Assembly-Reversing/blob/main/Static%20Analysis/case2_py.png?raw=true) 
 
 * הסבר על הפונקציה:
 
@@ -86,7 +85,7 @@ It focuses on Wonderland challenges stages 2 and 3 — including analysis and re
 
 הסיסמה שקיבלנו: **(,&.a6:$a03##+&a)->$**
 
-![case2](https://github.com/shirelsan/Assembly-Reversing/blob/main/case2-sol.png?raw=true) 
+![case2](https://github.com/shirelsan/Assembly-Reversing/blob/main/Static%20Analysis/case2-sol.png?raw=true) 
 
 
 ## Exercise: Wonderland 3
@@ -185,4 +184,4 @@ print(' '.join(map(str, sorted_indices)))
 
 הסיסמה שקיבלנו: **5 7 1 6 0 2 3 4**
 
-![case3 sol](https://github.com/shirelsan/Assembly-Reversing/blob/main/case_3-sol.png?raw=true) 
+![case2](https://github.com/shirelsan/Assembly-Reversing/blob/main/Static%20Analysis/case3-sol.png?raw=true) 
