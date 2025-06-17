@@ -37,7 +37,7 @@ cmp [ebp+Str1], lea [ebp+Str]
 
 1. הרצתי את התוכנית ב־debugger, עם נקודות עצירה, עצרתי לפני הקריאה ל־strncmp.בשביל לבדוק מה הכתובת של המחרוזת שהורכבה ב־stack - של str:
 
-![1](https://github.com/shirelsan/Assembly-Reversing/blob/main/image_wonder4+5/wonder4_3.jpg?raw=true) 
+![1](https://github.com/shirelsan/Assembly-Reversing/blob/main/image_wonder4+5/wonder4_3.jpg.png?raw=true) 
 
 2. הכנסתי את הערך הדיצימלי של הכתובת 0x19fefc -> 1703676 אבל קיבלתי את המסר:
 
