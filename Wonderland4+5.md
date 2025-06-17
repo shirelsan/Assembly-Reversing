@@ -46,10 +46,11 @@ Cheater.. Try again another way.
 
 ![2](https://github.com/shirelsan/Assembly-Reversing/blob/main/image_wonder4+5/wonder4.jpg?raw=true) 
 
-מצאתי כתובת קבועה בזיכרון שבה המחרוזת קיימת.
+מצאתי כתובת קבועה בזיכרון שבה המחרוזת קיימת - בתמונה קפיצה לכתובת 0x40473e:
 
 ![3](https://github.com/shirelsan/Assembly-Reversing/blob/main/image_wonder4+5/wonder4_2.jpg?raw=true) 
 
+לכן המרת הכתובת 0x40473e למספר עשורני צריך העבור את שתי הבדיקות גם של התוכן וגם של הכתובת. 
 
 ### **הפתרון: 0040473e -> 4212542**
 
