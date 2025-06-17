@@ -55,3 +55,11 @@ Cheater.. Try again another way.
 ### **הפתרון: 0040473e -> 4212542**
 
 ![4](https://github.com/shirelsan/Assembly-Reversing/blob/main/image_wonder4+5/sol4.jpg?raw=true) 
+
+## Exercise: Wonderland 5
+
+### **מטרה**
+
+### **ניתוח הקוד**
+
+### **שלבי הפתרון**
