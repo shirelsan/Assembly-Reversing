@@ -17,10 +17,13 @@ push    offset aDu      ; " %du"
 call    scanf
   ```
  התוכנית מצפה לקלט מסוג unsigned decimal - כלומר, המספר שאני מכניסה הוא עשרוני. 
+ 
  2. **בדיקת התוכן** -
+
   ```asm
 call    ds:strncmp
   ```
+
 התוכנית משווה בין הקלט שהוזן (Str1) לבין המחרוזת שהורכבה ב־stack היא "Good luck!!".
 
 3. **בדיקת הכתובת** -
@@ -35,16 +38,18 @@ cmp [ebp+Str1], lea [ebp+Str]
 
 ![1](https://github.com/shirelsan/Assembly-Reversing/blob/main/image_wonder4+5/wonder4_1.jpg?raw=true) 
 
-2. הכנסתי את הערך הדיצימלי של הכתובת 0x19fefc -> 1703676 אבל קיבלתי את המסר: 
+2. הכנסתי את הערך הדיצימלי של הכתובת 0x19fefc -> 1703676 אבל קיבלתי את המסר:
+
 Cheater.. Try again another way.
 
-3. חיפשתי בזיכרון כתובת אחרת שבה מופיעה אותה מחרוזת:
+4. חיפשתי בזיכרון כתובת אחרת שבה מופיעה אותה מחרוזת:
 
 ![2](https://github.com/shirelsan/Assembly-Reversing/blob/main/image_wonder4+5/wonder4.jpg?raw=true) 
 
 מצאתי כתובת קבועה בזיכרון שבה המחרוזת קיימת.
 
 ![3](https://github.com/shirelsan/Assembly-Reversing/blob/main/image_wonder4+5/wonder4_2.jpg?raw=true) 
+
 
 ### **הפתרון: 0040473e -> 4212542**
 
