@@ -175,9 +175,8 @@ jnz     short loc_40181A        ; אם לא 'X', ממשיכים הלאה (יעד
 
 רצף הספרות הנכון שנמצא:**2221114411411222111**
 
-![4](https://github.com/shirelsan/Assembly-Reversing/blob/main/image_wonder4+5/wonder5_sol.jpg?raw=true) 
-
 לאחר הבדיקה של הפונקציה היא מחזירה את eax אם הוא שווה 1 הפונקציה תעבור למסר ההצלחה ואם הוא 0 יודפס מסר כישלון
 
   ![4](https://github.com/shirelsan/Assembly-Reversing/blob/main/image_wonder4+5/wonder5_4.jpg.png?raw=true) 
 
+  ![4](https://github.com/shirelsan/Assembly-Reversing/blob/main/image_wonder4+5/wonder5_sol.jpg?raw=true) 
