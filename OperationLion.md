@@ -62,12 +62,13 @@ v = (i * 7) ^ v;
 
 כלומר, עבור הקלט 2, הפונקציה מחזירה 48-.
 
- ### ניתוח הפונקציה sub_401430
+ ### ניתוח הפונקציה sub_401430:
 
 הפונקציה בודקת האם קיום קובץ בנתיב מסוים ומגיבה בהתאם לתוצאה.
 
 #### מהלך הפעולה:
-1. הפונקציה יוצרת את הנתיב: C:\ReversingCTF\DroneAttack.txt
+1. הפונקציה יוצרת את הנתיב: 
+C:\ReversingCTF\DroneAttack.txt
 
 2. לאחר מכן, מבוצעת בדיקה האם הקובץ קיים בעזרת הקריאה `FindFirstFileA`.
 
@@ -79,8 +80,10 @@ v = (i * 7) ^ v;
 - מודפסת ההודעה: `"Danger! Anti aircraft system is still online!"`
 
 ### **פתרון**
+
 לצורך קבלת הודעת ההצלחה בשלב זה, יש לוודא כי הקובץ הבא קיים: C:\ReversingCTF\DroneAttack.txt
-יצירת הקובץ באופן ידני איפשרה התקדמות למשימה הבאה:
+
+יצירת הקובץ באופן ידני איפשרה התקדמות לשלב הבא:
 ```sql
 Anti aircraft system located
 Initiating disable sequence
@@ -92,7 +95,7 @@ Stage 2: You are a jet fighter pilot. The sky is clear...
 
 
 
-### ניתוח הפונקציה sub_3C1390
+### ניתוח הפונקציה sub_3C1390:
 
 * חתימת הפונקציה: int sub_3C1390(int a, int b)
 ```asm
