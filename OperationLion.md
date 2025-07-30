@@ -73,7 +73,7 @@ v = (i * 7) ^ v;
 2. לאחר מכן, מבוצעת בדיקה האם הקובץ קיים בעזרת הקריאה `FindFirstFileA`.
 
 3. אם הקובץ **נמצא**:
-- מודפסת ההודעה: `"Anti aircraft system located\nInitiating..."`
+- מודפסת ההודעה: `"Anti aircraft system located Intiating disable sequence..."`
 - מתבצע ניסיון לפתוח את הקובץ עם CreateFileA בשביל להמשיך.
 
 4. אם הקובץ **לא נמצא**:
