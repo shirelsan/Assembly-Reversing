@@ -62,8 +62,8 @@ v = (i * 7) ^ v;
 
 כלומר, עבור הקלט 2, הפונקציה מחזירה 48-.
 
- ### ניתוח הפונקציה sub_401430:
-
+ ### ניתוח הפונקציה sub_3C1430:
+ 
 הפונקציה בודקת האם קיום קובץ בנתיב מסוים ומגיבה בהתאם לתוצאה.
 
 #### מהלך הפעולה:
@@ -90,8 +90,14 @@ Initiating disable sequence
 Great job. Anti aircraft system is disabled
 Stage 2: You are a jet fighter pilot. The sky is clear...
 ```
+בנוסף, נוצר לי קובץ חדש בשם: `AttackIRGC.dll`  וישמש אותי בהמשך – ככל הנראה בשלב 2.
 
 ### שלב 2: 
+* מסקנת בניים: AttackIRGC.dll לא DLL תקני, הקובץ לא מתחיל בחתימת MZ - הפורמט של PE מחייב להתחיל ב־MZ. (כלומר 0x4D 0x5A) ולי זה מתחיל ב־: 
+0F 15 DD 42 41 4F 4D 42 ...
+![MZ](https://github.com/shirelsan/Assembly-Reversing/blob/main/image.jpg.png?raw=true)
+
+
 
 
 
