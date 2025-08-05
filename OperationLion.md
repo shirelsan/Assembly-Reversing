@@ -171,6 +171,34 @@ Enter code
 
 
 
+
+```python
+import itertools
+
+def check_code(code, dword_10004374):
+    if len(code) != 8 or not code.isdigit():
+        return False
+    
+    # בדיקה שאין ספרות מחוץ לטווח 1-8 ושהן לא חוזרות
+    digits = [int(ch) - 1 for ch in code]
+    if any(d < 0 or d > 7 for d in digits) or len(set(digits)) != 8:
+        return False
+    
+    # בדיקה שהערכים במערך dword_10004374 בסדר לא יורד לפי הקוד
+    return all(dword_10004374[digits[i]] <= dword_10004374[digits[i+1]] for i in range(7))
+
+dword_10004374 = [9, 8, 10, 9, 9, 7, 6, 7]
+digits = '12345678'
+
+valid_codes = [''.join(p) for p in itertools.permutations(digits) if check_code(''.join(p), dword_10004374)]
+
+print("Valid codes:")
+for code in valid_codes:
+    print(code)
+```
+
+
+
 ### ניתוח הפונקציה sub_3C1390:
 
 * חתימת הפונקציה: int sub_3C1390(int a, int b)
