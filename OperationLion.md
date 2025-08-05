@@ -134,11 +134,12 @@ jz      short loc_100014A3
 
 ![CODE](https://github.com/shirelsan/Assembly-Reversing/blob/main/image_CTF/func.png?raw=true)
 
-4. הרצת התוכנית הובילה להדפסה: "Pilot, mission failed. Return to base"
+4. הרצת התוכנית הובילה להדפסה:
+    "Pilot, mission failed. Return to base"
   
-   לכן נסיתי לחקור את הפונקציה וכשמתי breakpoint על השורה של ההשוואה בשביל לראות את התנאי הbreakpoint לא עבד והתוכנית נסגרה. הבנתי שככה"נ יש פה מנגנון אנטי-דיבג.
+לכן נסיתי לחקור את הפונקציה וכשמתי breakpoint על השורה של ההשוואה בשביל לראות את התנאי הbreakpoint לא עבד והתוכנית נסגרה. הבנתי שככה"נ יש פה מנגנון אנטי-דיבג.
 
-5. **חקירת DllMain:**
+5. **ניתוח DllMain:**
 * הפונקציה בודקת אם fdwReason == 1 כלומר האם ה־DLL נטען.
 *  אם כן, היא קוראת לפונקציה sub_10001200.
 *  אם הפונקציה לא מחזירה 1, מודפס "Pilot, mission failed..." ואז ```asm call ExitProcess ```
