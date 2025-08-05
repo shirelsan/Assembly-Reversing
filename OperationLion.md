@@ -95,8 +95,29 @@ Stage 2: You are a jet fighter pilot. The sky is clear...
 ### שלב 2: 
 * מסקנת בניים: AttackIRGC.dll לא DLL תקני, הקובץ לא מתחיל בחתימת MZ - הפורמט של PE מחייב להתחיל ב־MZ. (כלומר 0x4D 0x5A) ולי זה מתחיל ב־: 
 0F 15 DD 42 41 4F 4D 42 ...
+
+
+#### פענוח קובץ ה-DLL (AttackIRGC.dll):
+
+* פתיחה ב־CFF Explorer ו־Hex Editor הראתה כי הקובץ אינו מתחיל בחתימת MZ, כמצופה מקובץ PE תקין.
+
+* חישוב XOR על התווים הראשונים של הקובץ מאפשר גילוי מפתח ההצפנה:
+* הבייט הראשון בקובץ: 0x0F -אמור להיות 0x4D ('M')
+←  חישוב: 0x0F ^ 0x4D = 0x42 (התו 'B')
+* הבייט השני בקובץ: 0x15 - אמור להיות 0x5A ('Z')
+←  חישוב: 0x15 ^ 0x5A = 0x4F (התו 'O')
+
+בנוסף, באזור ה־Hex קיימת חזרתיות ברורה של הרצף "BOMB", מה שמרמז על מפתח ההצפנה.
+
+קוד פייתון לפענוח הקובץ ויצירת קובץ מפוענח:
+![CODE](https://github.com/shirelsan/Assembly-Reversing/blob/main/image.jpg.png?raw=true)
+
+תוצאה:
+מפתיחת הקובץ המפוענח Decoded.dll ניתן לראות כי הקובץ תקין, עם כל החלקים והמבנה הצפוי של קובץ DLL תקין, ולא רק תצוגת Hex-Edior.
+
 ![MZ](https://github.com/shirelsan/Assembly-Reversing/blob/main/image.jpg.png?raw=true)
 
+#### ניתוח קובץ Decoded.dll:
 
 
 
