@@ -94,12 +94,12 @@ Stage 2: You are a jet fighter pilot. The sky is clear...
 
 ### שלב 2: 
 * מסקנת בניים: AttackIRGC.dll לא DLL תקני, הפורמט של PE מחייב להתחיל ב־MZ. (כלומר 0x4D 0x5A) ולי זה מתחיל ב־: 
-0F 15 DD 42 41 ...
+0F 15 DD 42 41 ... 
 
 
 #### פענוח קובץ ה-DLL (AttackIRGC.dll):
 
-• פתיחה ב־CFF Explorer ו־Hex Editor הראתה כי הקובץ אינו מתחיל בחתימת MZ, כמצופה מקובץ PE תקין.
+• פתיחה ב־CFF Explorer ו־Hex Editor הראתה כי הקובץ אינו מתחיל בחתימת MZ, כמצופה מקובץ PE תקין ואין Entry point שמעיד על קובץ DLL.
 
 * חישוב XOR על התווים הראשונים של הקובץ מאפשר גילוי מפתח ההצפנה:
 * הבייט הראשון בקובץ: 0x0F -אמור להיות 0x4D ('M')
@@ -120,8 +120,45 @@ Stage 2: You are a jet fighter pilot. The sky is clear...
 
 ![CODE](https://github.com/shirelsan/Assembly-Reversing/blob/main/image_CTF/dll.png?raw=true)
 
-#### ניתוח קובץ Decoded.dll:
+### תהליך ניתוח קובץ Decoded.dll:
 
+1. מבדיקה ב-Export Directory ראיתי שהקובץ מכיל פונקציה בשם hack_security פתחתי את הקובץ DLL בIDA וחיפשתי אחרי הפונקציה על מנת להבין את החתימה שלה והאם היא מקבלת פרמטרים.
+2. מבדיקת הפונקציה ראיתי שהיא מקבלת פרמטר 1 (arg_0) וכן היא בודקת אם הפרמטר שהיא מקבלת הוא 0x2008
+```asm
+cmp     [ebp+arg_0], 2008h
+jz      short loc_100014A3
+```
+אם כן היא קופצת ל־loc_100014A3 ומודפס מסר הצלחה
+אם לא מודפס מסר שגיאה. 
+3. כתיבת קוד לייבוא הDLL וקריאה לפונקציה hack_security עם הפרמטר 0x2008:
+
+![CODE](https://github.com/shirelsan/Assembly-Reversing/blob/main/image_CTF/func.png?raw=true)
+
+4. הרצת התוכנית הובילה להדפסה: "Pilot, mission failed. Return to base" לכן נסיתי לחקור את הפונקציה ושמתי breakpoint על השורה של ההשוואה בשביל לראות את התנאי אבל תוך כדי הרצה (אי הצלחה של הbreakpoint) התוכנית נסגרת ישר מכאן הבנתי שככה"נ יש פה מנגנון אנטי-דיבג.
+5. חקירת DllMain:
+* בודק אם fdwReason == 1 כלומר האם ה־DLL נטען.
+  אם כן, הוא קורא לפונקציה sub_10001200. אם הפונקציה הזו לא מחזירה 1, הוא מדפיס "Pilot, mission failed..." ואז ```asm call ExitProcess ```
+
+  התהליך נסגר לפני שאני מגיעה ל־hack_security
+6. **הבנת הפונקציה sub_10001200 ולגרום לה להחזיר תמיד 0:**
+  * הפונקציה מחזירה האם התהליך נמצא תחת Debugger. אם כן ← BeingDebugged == 1 אם לא ← BeingDebugged == 0
+  * כיוון שמדובר במנגנון אנטי-דיבג לפי הוראות מותר לבצע פיצפוץ' לכן שיניתי את הפונקציה שתיראה כך:
+```asm
+mov eax, 0
+ret
+```
+![CODE](https://github.com/shirelsan/Assembly-Reversing/blob/main/image_CTF/nop.png?raw=true)
+והרצת התוכנית שוב הובילה להדפסה:
+```sql
+Great job pilot, bombs hit IRGC.
+
+Stage 3: Welcome cyber specialist.
+Your mission : Penetrate the security system of the supreme leader.
+The location of the enriched Uranium is stored there.
+Your country depends on your skills. We COUNT on you. Good luck.
+Enter code
+```
+### שלב 3:
 
 
 
