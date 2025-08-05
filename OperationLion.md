@@ -155,8 +155,9 @@ jz      short loc_100014A3
 mov eax, 0
 ret
 ```
+והוספת NOP בשורות האחרות:
 ![CODE](https://github.com/shirelsan/Assembly-Reversing/blob/main/image_CTF/nop.png?raw=true)
-והרצת התוכנית שוב הובילה להדפסה:
+הרצת התוכנית שוב הובילה להדפסה:
 ```sql
 Great job pilot, bombs hit IRGC.
 
