@@ -118,7 +118,7 @@ Stage 2: You are a jet fighter pilot. The sky is clear...
 מפתיחת הקובץ המפוענח Decoded.dll ניתן לראות כי הקובץ תקין, עם כל החלקים והמבנה הצפוי של קובץ DLL תקין, ולא רק תצוגת Hex-Edior.
 
 
-![MZ](https://github.com/shirelsan/Assembly-Reversing/blob/main/image_CTF/dll.png?raw=true)
+![CODE](https://github.com/shirelsan/Assembly-Reversing/blob/main/image_CTF/dll.png?raw=true)
 
 #### ניתוח קובץ Decoded.dll:
 
