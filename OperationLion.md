@@ -99,7 +99,7 @@ Stage 2: You are a jet fighter pilot. The sky is clear...
 
 #### פענוח קובץ ה-DLL (AttackIRGC.dll):
 
-* פתיחה ב־CFF Explorer ו־Hex Editor הראתה כי הקובץ אינו מתחיל בחתימת MZ, כמצופה מקובץ PE תקין.
+• פתיחה ב־CFF Explorer ו־Hex Editor הראתה כי הקובץ אינו מתחיל בחתימת MZ, כמצופה מקובץ PE תקין.
 
 * חישוב XOR על התווים הראשונים של הקובץ מאפשר גילוי מפתח ההצפנה:
 * הבייט הראשון בקובץ: 0x0F -אמור להיות 0x4D ('M')
@@ -110,10 +110,13 @@ Stage 2: You are a jet fighter pilot. The sky is clear...
 בנוסף, באזור ה־Hex קיימת חזרתיות ברורה של הרצף "BOMB", מה שמרמז על מפתח ההצפנה.
 
 קוד פייתון לפענוח הקובץ ויצירת קובץ מפוענח:
+
 ![CODE](https://github.com/shirelsan/Assembly-Reversing/blob/main/image.jpg.png?raw=true)
 
-תוצאה:
+**תוצאה:**
+
 מפתיחת הקובץ המפוענח Decoded.dll ניתן לראות כי הקובץ תקין, עם כל החלקים והמבנה הצפוי של קובץ DLL תקין, ולא רק תצוגת Hex-Edior.
+
 
 ![MZ](https://github.com/shirelsan/Assembly-Reversing/blob/main/image.jpg.png?raw=true)
 
